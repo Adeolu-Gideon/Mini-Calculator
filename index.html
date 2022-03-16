@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            background-image: url(/calculator/images/bgimg2.jpg);
+            background-size: cover;
+        }
+       
+        input {
+            background-color: navy;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+            width: 250px;
+            height: 30px;
+            padding: 5px;
+            align-items: center;
+            justify-content: center;
+            display: inline;
+            margin: 15px 0px 15px 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        input[type="button" i]:hover {
+            background-color: royalblue;
+        }
+        input[type="text" i] {
+            border: 5px ridge navy;
+            border-radius: 15px;
+        }
+        input[type="text" i]:focus {
+            background-color: royalblue;
+        }
+
+        input[type="button" i] {
+            width: 72px;
+            height: 60px;
+            margin: 5px 10px 5px 10px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border: 5px ridge navy;
+            border-radius: 15px;
+        }
+
+        #cancel:hover {
+            background-color: lightcoral;
+        }
+        #cancel {
+            background-color: darkred;
+            border: 5px ridge darkred;
+            border-radius: 15px;
+        }
+
+        .form2style {
+            width: 290px;  
+            background-color: #e0dcdb;  
+            margin: 50px auto;  
+            height: 520px;  
+            border-radius: 25px;  
+            padding: 20px 20px 0px 20px;  
+            border: 15px ridge gray;
+            box-shadow: 5px 4px 8px 6px rgb(0 0 0 / 0%), 5px 6px 20px 5px rgb(0 0 0 / 80%)  
+        }
+</style>
+</head>
+
+<body>
+    <div class="form2style">
+    <form name="form2">
+        <input type="text" id="answer"><br>
+
+        <input type="button" value="1" onclick="form2.answer.value += '1' ">
+        <input type="button" value="2" onclick="form2.answer.value += '2' ">
+        <input type="button" value="3" onclick="form2.answer.value += '3' "><br>
+        <input type="button" value="4" onclick="form2.answer.value += '4' ">
+        <input type="button" value="5" onclick="form2.answer.value += '5' ">
+        <input type="button" value="6" onclick="form2.answer.value += '6' "><br>
+        <input type="button" value="7" onclick="form2.answer.value += '7' ">
+        <input type="button" value="8" onclick="form2.answer.value += '8' ">
+        <input type="button" value="9" onclick="form2.answer.value += '9' "><br>
+        <input type="button" value="0" onclick="form2.answer.value += '0' ">
+        <input type="button" value="." onclick="form2.answer.value += '.' ">
+        <input type="button" value="=" onclick="form2.answer.value = eval(form2.answer.value) "><br>
+        
+        <input type="button" value="+" onclick="form2.answer.value += '+' ">
+        <input type="button" value="x" onclick="form2.answer.value += '*' ">
+        <input type="button" value="-" onclick="form2.answer.value += '-' "><br>
+        <input type="button" value="&#247;" onclick="form2.answer.value += '/' ">
+        <input type="button" value="%" onclick="form2.answer.value += '%' ">
+        <input type="button" onclick="Clear()" value="C" id="cancel">
+                
+    </form>
+    </div>
+
+    <script>
+        function Clear() {
+            document.form2.answer.value = "";
+    }
+    </script>
+</body>
+
+</html>
